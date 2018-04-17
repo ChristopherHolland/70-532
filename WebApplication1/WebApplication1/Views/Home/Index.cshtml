@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication1.Models.BlobImage>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+        
+    @foreach (var item in Model) {
+        
+        <img src="@item.BlobUri" />
+        <br />
+        <a href="@item.BlobUri">@item.BlobUri</a>
+        <br />
+        <a href="@item.BlobStorageUri">@item.BlobStorageUri</a>
+        <br />
+
+    }
+
+</body>
+</html>
